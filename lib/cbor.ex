@@ -92,6 +92,9 @@ defmodule CBOR do
       iex> CBOR.encode(%{"a" => 1, "b" => [2, 3]})
       <<162, 97, 97, 1, 97, 98, 130, 2, 3>>
 
+      iex> CBOR.encode(%OrdMap{tuples: [{"a", 1}, {"b", [2, 3]}]})
+      <<162, 97, 97, 1, 97, 98, 130, 2, 3>>
+
   """
   @spec encode(any()) :: binary()
   def encode(value), do: CBOR.Encoder.encode_into(value, <<>>)
