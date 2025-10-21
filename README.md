@@ -57,6 +57,22 @@ iex(2)> CBOR.decode(<<130, 1, 130, 2, 3>>)
 {:ok, [1, [2, 3]], ""}
 ```
 
+### Insertion Ordered Maps
+
+OrdMaps from the ord\_map project can be accepted by the encoder
+
+```elixir
+iex(1)> CBOR.encode(OrdMap.new([{"a", 1}, {"b", 2}, {"c", 3}]))
+<<163, 97, 97, 1, 97, 98, 2, 97, 99, 3>>
+```
+
+and decoded by explicitly passing the ":ordered" atom to the decode function
+
+```elixir
+iex(2)> CBOR.decode(<<163, 97, 97, 1, 97, 98, 2, 97, 99, 3>>, :ordered)
+{:ok, %OrdMap(tuples: [{"a", 1}, {"b", 2}, {"c", 3}]), {}}
+```
+
 ## Design Notes
 
 Given that Elixir has more available data types than are supported in CBOR, decisions were made so that encoding complex data structures succeed without throwing errors. My thoughts are collected below so you can understand why encoding and decoding of a value does not necessarily return exactly the same value.
