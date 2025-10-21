@@ -140,7 +140,7 @@ defmodule CBOR do
     try do
       perform_decoding(binary, is_ordered?)
     rescue
-      e in FunctionClauseError -> dbg(e); {:error, :cbor_function_clause_error}
+      FunctionClauseError -> {:error, :cbor_function_clause_error}
       MatchError -> {:error, :cbor_match_error}
     end
   end
