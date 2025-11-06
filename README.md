@@ -1,10 +1,20 @@
+# IMPORTANT
+
+**This package is a fork of the much better maintained
+https://github.com/scalpel-software/cbor to accomodate serializing and
+deserializing to an ordered map representation needed for our cesr
+implmentation https://github.com/vLEIDA/cesrixir. Unless you need this
+capability its probably better to use that library which is better maintained
+and the original work (which was a fork of excbor as mentioned below).
+**
+
 # CBOR
 
-[![Module Version](https://img.shields.io/hexpm/v/cbor.svg)](https://hex.pm/packages/cbor)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/cbor/)
-[![Total Download](https://img.shields.io/hexpm/dt/cbor.svg)](https://hex.pm/packages/cbor)
-[![License](https://img.shields.io/hexpm/l/cbor.svg)](https://github.com/scalpel-software/cbor/blob/master/LICENSE.md)
-[![Last Updated](https://img.shields.io/github/last-commit/scalpel-software/cbor.svg)](https://github.com/scalpel-software/cbor/commits/master)
+[![Module Version](https://img.shields.io/hexpm/v/cbor.svg)](https://hex.pm/packages/cbor_ordmap)
+[![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/cbor_ordmap/)
+[![Total Download](https://img.shields.io/hexpm/dt/cbor.svg)](https://hex.pm/packages/cbor_ordmap)
+[![License](https://img.shields.io/hexpm/l/cbor.svg)](https://github.com/vLEIDA/cbor/blob/master/LICENSE.md)
+[![Last Updated](https://img.shields.io/github/last-commit/vLEIDA/cbor.svg)](https://github.com/vLEIDA/cbor/commits/master)
 
 Implementation of RFC 7049 [CBOR](http://cbor.io) (Concise Binary
 Object Representation) for Elixir.

@@ -1,7 +1,7 @@
 defmodule Cbor.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/scalpel-software/cbor"
+  @source_url "https://github.com/vLEIDA/cbor"
   @version "1.0.1"
 
   def project do
@@ -31,8 +31,9 @@ defmodule Cbor.MixProject do
 
   defp package do
     [
-      description: "Implementation of RFC 7049 (Concise Binary Object Representation)",
-      maintainers: ["tomciopp"],
+      name: "cbor_ordmap",
+      description: "Implementation of RFC 7049 (Concise Binary Object Representation) with support for serializing/deserializing to an ordered map representation.",
+      maintainers: ["daidoji", "dc7"],
       licenses: ["MIT"],
       links: %{"GitHub" => @source_url}
     ]
